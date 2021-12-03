@@ -1,0 +1,35 @@
+.videobox {
+  border: 3px solid #0063ff;
+  border-color: #0063ff;
+  width: 200px;
+  height: 200px;
+}
+.Start {
+  width: 150px;
+  height: 50px;
+  margin: 10px;
+  border: 2px solid #07dd72;
+  background-color: springgreen;
+  font-weight: 900;
+  border-radius: 10px;
+  color: rgb(3, 196, 51);
+  box-shadow: -5px 2px 28px -10px rgb(0 0 0 / 75%);
+  -webkit-box-shadow: -5px 2px 28px -10px rgb(90 157 86 / 75%);
+}
+.Stop {
+  width: 150px;
+    height: 50px;
+    border: 2px solid;
+    background-color: lightpink;
+    color: red;
+    font-weight: 900;
+    border-radius: 10px;
+    box-shadow: -5px 2px 28px -10px rgb(0 0 0 / 75%);
+    -webkit-box-shadow: -5px 2px 28px -10px rgb(223 15 15 / 75%);
+}
+.ControlBox {
+  width: fit-content;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}

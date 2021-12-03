@@ -4,11 +4,13 @@ import { LightgalleryModule } from 'lightgallery/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModalModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HandtrackerComponent } from './handtracker/handtracker.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HandtrackerComponent
   ],
   imports: [
     BrowserModule,
