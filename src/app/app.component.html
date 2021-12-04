@@ -1,5 +1,9 @@
-<app-handtracker (onPrediction)="prediction($event)"></app-handtracker>
+<app-handtracker
+  (onPrediction)="prediction($event)"
+  [optionsMenu]="optionsMenu"
+></app-handtracker>
 <div
+  *ngIf="optionsMenu == false"
   [innerHTML]="gesture"
   style="
     width: auto;
@@ -58,7 +62,9 @@
               d="M0 9H22M12 1.5L20.9333 8.2C21.4667 8.6 21.4667 9.4 20.9333 9.8L12 16.5"
               stroke="white"
               stroke-width="3"
-            /></svg></a>
+            />
+          </svg>
+        </a>
       </div>
     </div>
 
@@ -98,8 +104,9 @@
               d="M0 9H22M12 1.5L20.9333 8.2C21.4667 8.6 21.4667 9.4 20.9333 9.8L12 16.5"
               stroke="white"
               stroke-width="3"
-            /></svg
-        ></a>
+            />
+          </svg>
+        </a>
       </div>
     </div>
 
@@ -140,8 +147,9 @@
               d="M0 9H22M12 1.5L20.9333 8.2C21.4667 8.6 21.4667 9.4 20.9333 9.8L12 16.5"
               stroke="white"
               stroke-width="3"
-            /></svg
-        ></a>
+            />
+          </svg>
+        </a>
       </div>
     </div>
   </div>
@@ -168,7 +176,11 @@
     </div>
     <div class="modal-body">
       <section id="photos">
-        <lightgallery [settings]="settings" [onBeforeSlide]="onBeforeSlide">
+        <lightgallery
+          [settings]="settings"
+          [onBeforeSlide]="onBeforeSlide"
+          id="lg-method-demo"
+        >
           <a
             data-lg-size="1600-1067"
             class="gallery-item"

@@ -26,18 +26,17 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/lightgallery.js/dist/css/lightgallery.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",
               "node_modules/justifiedGallery/dist/js/jquery.justifiedGallery.js",
               "node_modules/justifiedGallery/dist/js/jquery.justifiedGallery.min.js",
-              "node_modules/jquery/dist/jquery.js"
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/lightgallery.js/dist/js/lightgallery.js"
             ]
           },
           "configurations": {
@@ -99,18 +98,17 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/lightgallery.js/dist/css/lightgallery.css"
             ],
             "scripts": [
-           "./node_modules/jquery/dist/jquery.min.js",
-           "node_modules/justifiedGallery/dist/js/jquery.justifiedGallery.js",
-           "node_modules/justifiedGallery/dist/js/jquery.justifiedGallery.min.js",
-              "node_modules/jquery/dist/jquery.js"
+              "./node_modules/jquery/dist/jquery.min.js",
+              "node_modules/justifiedGallery/dist/js/jquery.justifiedGallery.js",
+              "node_modules/justifiedGallery/dist/js/jquery.justifiedGallery.min.js",
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/lightgallery.js/dist/js/lightgallery.js"
             ]
           }
         }

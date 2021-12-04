@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, Output, EventEmitter } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, Output, Input, EventEmitter } from '@angular/core';
 import * as handTrack from 'handtrackjs';
 import { PredictionEvent } from '../prediction-event';
 
@@ -8,6 +8,7 @@ import { PredictionEvent } from '../prediction-event';
   styleUrls: ['./handtracker.component.scss']
 })
 export class HandtrackerComponent implements OnInit {
+  @Input() optionsMenu: boolean = false;
   @Output() onPrediction = new EventEmitter<PredictionEvent>();
   @ViewChild('htvideo') video!: ElementRef;
 
@@ -111,10 +112,18 @@ export class HandtrackerComponent implements OnInit {
         if (pinching > 1) this.detectedGesture = "Two Hands Pinching";
         else if (pinching == 1) this.detectedGesture = "Hand Pinching";
 
+        if (pointing == 1 && openhands == 1) this.detectedGesture = "One Pointed & One Open Hand"
+        else if (pointing == 1 && closedhands == 1) this.detectedGesture = "One Pointed & One Closed Hand"
+
         if (openhands == 0 && closedhands == 0 && pointing == 0 && pinching == 0)
           this.detectedGesture = "None";
 
         this.onPrediction.emit(new PredictionEvent(this.detectedGesture))
+
+        if (this.detectedGesture == "One Pointed & One Closed Hand") {
+          this.stopDetection();
+        }
+
       }, (err: any) => {
         console.log("ERROR")
         console.log(err)

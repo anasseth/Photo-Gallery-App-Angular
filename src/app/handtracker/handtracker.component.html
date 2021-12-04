@@ -1,4 +1,5 @@
 <video
+  [ngClass]="{ hide: optionsMenu == true }"
   id="htvideo"
   #htvideo
   name="htvideo"
@@ -16,7 +17,7 @@
     -webkit-box-shadow: -5px 2px 28px -10px rgb(0 0 0 / 75%);
   "
 ></video>
-<div class="ControlBox">
+<div class="ControlBox" *ngIf="optionsMenu == false">
   <button class="Start" (click)="startDetection()">Start</button>
   <button class="Stop" (click)="stopDetection()">Stop</button>
 </div>
