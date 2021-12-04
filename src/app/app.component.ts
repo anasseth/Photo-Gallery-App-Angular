@@ -90,14 +90,15 @@ export class AppComponent implements OnInit {
     }
     else if (this.gesture.toLowerCase() == "one pointed & one open hand") {
       console.log("")
-      console.log("Next Slide")
+      console.log("Show Options")
       console.log("")
-      this.toggleOptionsView()
+      this.showOptions()
     }
     else if (this.gesture.toLowerCase() == "one pointed & one closed hand") {
       console.log("")
-      console.log("Next Slide")
+      console.log("Hide Options")
       console.log("")
+      this.hideOptions()
     }
   }
 
@@ -145,9 +146,11 @@ export class AppComponent implements OnInit {
     const lg2 = document.getElementsByClassName("gallery-item")[0] as HTMLElement;
     lg2.click();
   }
-  toggleOptionsView() {
-    this.optionsMenu = !this.optionsMenu
+  showOptions() {
+    this.optionsMenu = false
   }
-
+  hideOptions() {
+    this.optionsMenu = true
+  }
 
 }

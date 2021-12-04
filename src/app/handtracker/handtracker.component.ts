@@ -114,13 +114,14 @@ export class HandtrackerComponent implements OnInit {
 
         if (pointing == 1 && openhands == 1) this.detectedGesture = "One Pointed & One Open Hand"
         else if (pointing == 1 && closedhands == 1) this.detectedGesture = "One Pointed & One Closed Hand"
+        else if (openhands == 1 && closedhands == 1) this.detectedGesture = "One Open & One Closed Hand"
 
         if (openhands == 0 && closedhands == 0 && pointing == 0 && pinching == 0)
           this.detectedGesture = "None";
 
         this.onPrediction.emit(new PredictionEvent(this.detectedGesture))
 
-        if (this.detectedGesture == "One Pointed & One Closed Hand") {
+        if (this.detectedGesture == "One Open & One Closed Hand") {
           this.stopDetection();
         }
 
