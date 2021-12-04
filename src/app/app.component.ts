@@ -98,7 +98,6 @@ export class AppComponent implements OnInit {
       console.log("")
       console.log("Next Slide")
       console.log("")
-      
     }
   }
 
